@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Parking karte</title>
+	<script src="webjars/jquery/3.2.1/jquery.js" type="text/javascript"></script>
+	<script src="js/zadatak6.js" type="text/javascript"></script>
+</head>
+<body>
+	<form get="zadatak6.html">
+		<table>
+			<tr><td>Registarska oznaka vozila</td><td><input type="text" name="registracija"/></td></tr>
+			<tr><td>Početak parkinga</td><td><input type="text" name="pocetakParkinga"/></td></tr>
+			<tr><td>Trajanje u minutima</td><td><input type="text" name="trajanjeUMinutima"/></td></tr>
+			<tr>
+				<td>Da li je osoba sa invaliditetom</td>
+				<td>
+					<input type="radio" name="osobaSaInvaliditetom" value="DA"/> DA
+					<input type="radio" name="osobaSaInvaliditetom" value="NE"/> NE
+				</td>
+			</tr>
+			<tr>
+				<td>Zona</td>
+				<td>
+					<select id="zona">
+						<option value="bela">bela</option>
+						<option value="plava">plava</option>
+						<option value="crvena">crvena</option>
+					</select>
+				</td>
+			</tr>
+			<tr><td></td><td><input type="submit" value="Dodaj"/></td></tr>
+		</table>
+	</form>
+</body>
+</html>

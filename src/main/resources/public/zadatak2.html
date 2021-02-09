@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Parking karte</title>
+</head>
+<body>
+	<form method="post" action="ParkingKarte/Create">
+		<table>
+			<tr><td>Registarska oznaka vozila</td><td><input type="text" name="registracija"/></td></tr>
+			<tr><td>Početak parkinga</td><td><input type="text" name="pocetakParkinga"/></td></tr>
+			<tr><td>Trajanje u minutima</td><td><input type="text" name="trajanjeUMinutima"/></td></tr>
+			<tr>
+				<td>Osoba sa invaliditetom</td>
+				<td>
+					<input type="radio" name="osobaSaInvaliditetom" value="DA"/> DA
+					<input type="radio" name="osobaSaInvaliditetom" value="NE"/> NE
+				</td>
+			</tr>
+			<tr>
+				<td>Zona</td>
+				<td>
+					<select name="zonaId">
+						<option value="1">bela</option>
+						<option value="2">plava</option>
+						<option value="3">crvena</option>
+					</select>
+				</td>
+			</tr>
+			<tr><td></td><td><input type="submit" value="Dodaj"/></td></tr>
+		</table>
+	</form>
+</body>
+</html>

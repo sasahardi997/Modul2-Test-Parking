@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Parking karte</title>
+</head>
+<body>
+	<form method="get">
+		<table>
+			<tr>
+				<th>Registarska oznaka vozila</th>
+				<th>Početak parkinga</th>
+				<th>Trajanje u minutima</th>
+				<th>Osoba sa invaliditetom</th>
+				<th>Zona</th>
+			</tr>
+			<tr>
+				<th></th>
+				<th></th>
+				<th>
+					Od: <input type="number" th:value="${param.trajanjeOd}?: '0'" name="trajanjeOd" min="0"><br/>
+					Do: <input type="number" th:value="${param.trajanjeDo}?: '1000'" name="trajanjeDo" min="0"><br/>
+				</th>
+				<th>
+					<input type="submit" value="Pretrazi">
+				</th>
+				<th></th>
+			</tr>
+			<tr th:each="pk : ${parkingKarte}">
+				<td th:text="${pk.registracija}"></td>
+				<td th:text="${pk.pocetakParkinga}"></td>
+				<td align="right" th:text="${pk.trajanjeUMinutama}"></td>
+				<td th:text="${pk.osobaSaInvaliditetom}"></td>
+				<td th:text="${pk.zona.naziv}"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
